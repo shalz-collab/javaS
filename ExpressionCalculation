@@ -1,0 +1,9 @@
+public class ExpressionCalculation {
+    public static void main(String[] args) {
+        Double d = 56.778;
+        Integer I = 20;
+        Float f = 10.5f;
+        int X = (int) (d + I + f);
+        System.out.println("The value of X is: " + X);
+    }
+}
