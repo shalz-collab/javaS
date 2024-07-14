@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class FibonacciEvenSum {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the value of N: ");
+    int N = scanner.nextInt();
+
+    int sum = 0;
+    int a = 0;
+    int b = 1;
+
+    for (int i = 0; i <= N; i++) {
+      if (i % 2 == 0) {
+        sum += a;
+      }
+
+      int temp = a;
+      a = b;
+      b = temp + b;
+    }
+
+    System.out.println("Sum of even-indexed Fibonacci numbers: " + sum);
+  }
+}
