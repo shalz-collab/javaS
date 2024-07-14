@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class SumOfSeries {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number (n) to calculate the sum of the first n natural numbers: ");
+        int n = scanner.nextInt();
+
+        int sum = n * (n + 1) / 2;
+
+       
+        System.out.println("Sum of the first " + n + " natural numbers is: " + sum);
+    }
+}
