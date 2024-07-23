@@ -1,0 +1,29 @@
+class Add
+{
+	int a;
+	int b;
+	int c;
+	void getdata()
+	{
+    		a=10;
+    		b=20
+	}
+	void cal()
+	{
+		c=a+b;
+	}
+	void disp()
+	{
+		System.out.println("Output:"+c);
+	}
+}
+class Test
+{
+	public static void main(String[] args)
+	{
+		Add obj=new Add();
+		obj.getdata();
+		obj.cal();
+		obj.disp();
+	}
+}
