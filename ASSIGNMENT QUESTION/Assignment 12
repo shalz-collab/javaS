@@ -1,0 +1,87 @@
+class Product 
+{
+    int productId;
+    String productName;
+    double price;
+    int stockQuantity;
+    void displayProductDetails() 
+    {
+        System.out.println("Product ID: " + productId);
+        System.out.println("Product Name: " + productName);
+        System.out.println("Price: $" + price);
+        System.out.println("Stock Quantity: " + stockQuantity);
+    }
+    void updateStock(int newStock)
+    {
+        stockQuantity = newStock;
+    }
+}
+class Electronics extends Product 
+{
+    String warranty;
+    void displayProductDetails() 
+    {
+        super.displayProductDetails();
+        System.out.println("Warranty: " + warranty);
+    }
+}
+
+class Clothing extends Product 
+{
+    String size;
+    void displayProductDetails() 
+    {
+        super.displayProductDetails();
+        System.out.println("Size: " + size);
+    }
+}
+
+class Grocery extends Product 
+{
+    String expirationDate;
+
+    public void displayProductDetails() {
+        super.displayProductDetails();
+        System.out.println("Expiration Date: " + expirationDate);
+    }
+}
+public class Assignment121
+{
+    public static void main(String[] args) 
+    {
+        Product genericProduct = new Product();
+        genericProduct.productId = 1;
+        genericProduct.productName = "Generic Product";
+        genericProduct.price = 29.99;
+        genericProduct.stockQuantity = 100;
+        System.out.println("Product Details:");
+        genericProduct.displayProductDetails();
+        System.out.println();
+        Electronics laptop = new Electronics();
+        laptop.productId = 2;
+        laptop.productName = "Laptop";
+        laptop.price = 999.99;
+        laptop.stockQuantity = 50;
+        laptop.warranty = "2 years";
+        System.out.println("Electronics Details:");
+        laptop.displayProductDetails();
+        System.out.println();
+        Clothing tShirt = new Clothing();
+        tShirt.productId = 3;
+        tShirt.productName = "T-Shirt";
+        tShirt.price = 19.99;
+        tShirt.stockQuantity = 200;
+        tShirt.size = "L";
+        System.out.println("Clothing Details:");
+        tShirt.displayProductDetails();
+        System.out.println();
+        Grocery milk = new Grocery();
+        milk.productId = 4;
+        milk.productName = "Milk";
+        milk.price = 3.49;
+        milk.stockQuantity = 150;
+        milk.expirationDate = "2024-08-15";
+        System.out.println("Grocery Details:");
+        milk.displayProductDetails();
+    }
+}
